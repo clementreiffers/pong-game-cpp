@@ -1,7 +1,7 @@
-#include <SFML/Graphics.hpp>
-
 #ifndef PONG_GAME_BALL_H
 #define PONG_GAME_BALL_H
+
+#include <SFML/Graphics.hpp>
 
 #define DX 0
 #define DY 1

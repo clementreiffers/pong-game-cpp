@@ -1,3 +1,0 @@
-C:/Users/creif/Documents/dossier_github/pong-game/pong-game/cmake-build-debug/CMakeFiles/SFML_TEST.dir
-C:/Users/creif/Documents/dossier_github/pong-game/pong-game/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/creif/Documents/dossier_github/pong-game/pong-game/cmake-build-debug/CMakeFiles/rebuild_cache.dir

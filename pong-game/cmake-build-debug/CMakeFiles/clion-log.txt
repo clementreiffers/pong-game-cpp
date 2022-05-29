@@ -1,5 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.1/bin/ninja/win/ninja.exe" -G Ninja -S C:\Users\creif\Documents\dossier_github\pong-game\pong-game -B C:\Users\creif\Documents\dossier_github\pong-game\pong-game\cmake-build-debug
--- Found SFML 2.5.1 in C:/Users/creif/Documents/dossier_github/pong-game/pong-game/lib/cmake/SFML
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/creif/Documents/dossier_github/pong-game/pong-game/cmake-build-debug

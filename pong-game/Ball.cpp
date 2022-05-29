@@ -27,6 +27,7 @@ void Ball::createShape() {
 }
 
 void Ball::move() {
+
 }
 
 void Ball::changeVelocity(int &_where, float &_value) {
