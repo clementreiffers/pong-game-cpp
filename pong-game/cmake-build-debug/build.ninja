@@ -56,6 +56,13 @@ build CMakeFiles/SFML_TEST.dir/main.cpp.obj: CXX_COMPILER__SFML_TEST_Debug C$:/U
   OBJECT_DIR = CMakeFiles\SFML_TEST.dir
   OBJECT_FILE_DIR = CMakeFiles\SFML_TEST.dir
 
+build CMakeFiles/SFML_TEST.dir/Ball.cpp.obj: CXX_COMPILER__SFML_TEST_Debug C$:/Users/creif/Documents/dossier_github/pong-game/pong-game/Ball.cpp || cmake_object_order_depends_target_SFML_TEST
+  DEP_FILE = CMakeFiles\SFML_TEST.dir\Ball.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  INCLUDES = -isystem C:/Users/creif/Documents/dossier_github/pong-game/pong-game/include
+  OBJECT_DIR = CMakeFiles\SFML_TEST.dir
+  OBJECT_FILE_DIR = CMakeFiles\SFML_TEST.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SFML_TEST
@@ -64,7 +71,7 @@ build CMakeFiles/SFML_TEST.dir/main.cpp.obj: CXX_COMPILER__SFML_TEST_Debug C$:/U
 #############################################
 # Link the executable SFML_TEST.exe
 
-build SFML_TEST.exe: CXX_EXECUTABLE_LINKER__SFML_TEST_Debug CMakeFiles/SFML_TEST.dir/main.cpp.obj | ../lib/libsfml-audio-d.a ../lib/libsfml-network-d.a ../lib/libsfml-graphics-d.a ../lib/libsfml-window-d.a ../lib/libsfml-system-d.a
+build SFML_TEST.exe: CXX_EXECUTABLE_LINKER__SFML_TEST_Debug CMakeFiles/SFML_TEST.dir/main.cpp.obj CMakeFiles/SFML_TEST.dir/Ball.cpp.obj | ../lib/libsfml-audio-d.a ../lib/libsfml-network-d.a ../lib/libsfml-graphics-d.a ../lib/libsfml-window-d.a ../lib/libsfml-system-d.a
   FLAGS = -g
   LINK_LIBRARIES = ../lib/libsfml-audio-d.a  ../lib/libsfml-network-d.a  ../lib/libsfml-graphics-d.a  ../lib/libsfml-window-d.a  ../lib/libsfml-system-d.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SFML_TEST.dir

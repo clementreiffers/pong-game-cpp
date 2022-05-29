@@ -7,7 +7,7 @@ set(SOURCE_FILES main.cpp)
 
 include_directories("${CMAKE_SOURCE_DIR}/include")
 
-add_executable(SFML_TEST main.cpp)
+add_executable(SFML_TEST main.cpp Ball.cpp Ball.h)
 
 set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib/cmake/SFML")
 find_package(SFML REQUIRED COMPONENTS audio network graphics window system)
