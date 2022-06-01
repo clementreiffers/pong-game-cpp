@@ -10,22 +10,23 @@
 
 class Ball {
 public:
-    int x, y, radius;
+    float x, y, radius;
     float dx, dy;
     sf::CircleShape shape{};
 
-    Ball(int const &, int const &, int const &);                              // radius x y
-    Ball(int const &, int const &, int const &, float const &, float const &);// radius x y dx dy
+    Ball(float const &, float const &, float const &);                              // radius x y
+    Ball(float const &, float const &, float const &, float const &, float const &);// radius x y dx dy
     Ball(Ball const &);
 
     void show(sf::RenderWindow &);
     void changeColor();
 
+    void move(sf::RenderWindow &);
+
 protected:
-    void move();
     void changeVelocity(int &, float &);
     void createShape();
-    void newValues(int const &, int const &, int const &, float const &, float const &);
+    void newValues(float const &, float const &, float const &, float const &, float const &);
 };
 
 

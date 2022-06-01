@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.22)
 project(pong_game)
 
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES main.cpp)
 
-include_directories("${CMAKE_SOURCE_DIR}/include")
+include_directories("${PROJECT_SOURCE_DIR}/include")
 
 add_executable(SFML_TEST main.cpp Ball.cpp Ball.h)
 

@@ -1,10 +1,11 @@
 #include "Ball.h"
+#include <iostream>
 
-Ball::Ball(int const &_radius, int const &_x, int const &_y) {
+Ball::Ball(float const &_radius, float const &_x, float const &_y) {
     newValues(_radius, _x, _y, 1, 1);
 }
 
-Ball::Ball(int const &_radius, int const &_x, int const &_y, float const &_dx, float const &_dy) {
+Ball::Ball(float const &_radius, float const &_x, float const &_y, float const &_dx, float const &_dy) {
     newValues(_radius, _x, _y, _dx, _dy);
 }
 
@@ -12,7 +13,7 @@ Ball::Ball(const Ball &otherBall) {
     newValues(otherBall.radius, otherBall.x, otherBall.y, otherBall.dx, otherBall.dy);
 }
 
-void Ball::newValues(int const &_radius, int const &_x, int const &_y, float const &_dx, float const &_dy) {
+void Ball::newValues(float const &_radius, float const &_x, float const &_y, float const &_dx, float const &_dy) {
     this->radius = _radius;
     this->x      = _x;
     this->y      = _y;
@@ -26,8 +27,16 @@ void Ball::createShape() {
     this->shape.setOrigin(this->x, this->y);
 }
 
-void Ball::move() {
+void Ball::move(sf::RenderWindow &_window) {
+    this->dx = this->x > (float) _window.getSize().x - shape.getRadius() || this->x < 0 ? -this->dx : this->dx;
+    this->dy = this->y > (float) _window.getSize().y - shape.getRadius() || this->y < 0 ? -this->dy : this->dy;
+    this->x += this->dx;
+    this->y += this->dy;
 
+    std::cout << this->x << std::endl;
+
+    this->shape.setOrigin(-this->x, -this->y);
+    show(_window);
 }
 
 void Ball::changeVelocity(int &_where, float &_value) {
