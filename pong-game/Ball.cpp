@@ -33,9 +33,9 @@ void Ball::move(sf::RenderWindow &_window) {
     this->x += this->dx;
     this->y += this->dy;
 
-    std::cout << this->x << std::endl;
-
     this->shape.setOrigin(-this->x, -this->y);
+
+    std::cout << "je suis passe ici" << this->y << std::endl;
     show(_window);
 }
 

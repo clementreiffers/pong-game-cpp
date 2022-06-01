@@ -1,11 +1,11 @@
 #include "Ball.h"
+#include "BallPool.h"
 #include <SFML/Graphics.hpp>
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(500, 500), "pong-game");
-    Ball ball          = Ball(10, 250, 250, 0.5, 0.5);
     sf::Time delayTime = sf::milliseconds(1);
-
+    BallPool ballPool = BallPool(15);
     while (window.isOpen()) {
         sf::Event event{};
         while (window.pollEvent(event)) {
@@ -13,7 +13,7 @@ int main() {
                 window.close();
         }
         window.clear();
-        ball.move(window);
+        ballPool.move(window);
         sf::sleep(delayTime);
         window.display();
     }
