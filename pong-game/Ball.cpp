@@ -19,17 +19,27 @@ void Ball::newValues(float const &_radius, float const &_x, float const &_y, flo
     this->y      = _y;
     this->dx     = _dx;
     this->dy     = _dy;
+    this->color  = 0;
     createShape();
 }
 
 void Ball::createShape() {
     this->shape = sf::CircleShape(this->radius);
     this->shape.setOrigin(this->x, this->y);
+    this->shape.setFillColor(GREEN);
 }
 
 void Ball::move(sf::RenderWindow &_window) {
-    this->dx = this->x > (float) _window.getSize().x - shape.getRadius() || this->x < 0 ? -this->dx : this->dx;
-    this->dy = this->y > (float) _window.getSize().y - shape.getRadius() || this->y < 0 ? -this->dy : this->dy;
+    if (this->x > (float) _window.getSize().x - shape.getRadius() || this->x < 0) {
+        this->dx = -this->dx;
+        this->shape.setFillColor(sf::Color(std::rand(), std::rand(), std::rand()));
+    }
+    if (this->y > (float) _window.getSize().y - shape.getRadius() || this->y < 0) {
+        this->dy = -this->dy;
+        this->shape.setFillColor(sf::Color(std::rand(), std::rand(), std::rand()));
+    }
+    sf::Color fill;
+
     this->x += this->dx;
     this->y += this->dy;
 
@@ -49,7 +59,6 @@ void Ball::changeVelocity(int &_where, float &_value) {
 }
 
 void Ball::show(sf::RenderWindow &_window) {
-    changeColor();
     _window.draw(this->shape);
 }
 void Ball::changeColor() {

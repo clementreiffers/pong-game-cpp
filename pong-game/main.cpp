@@ -5,7 +5,7 @@
 int main() {
     sf::RenderWindow window(sf::VideoMode(500, 500), "pong-game");
     sf::Time delayTime = sf::milliseconds(1);
-    BallPool ballPool = BallPool(15);
+    BallPool ballPool = BallPool(30);
     while (window.isOpen()) {
         sf::Event event{};
         while (window.pollEvent(event)) {

@@ -7,11 +7,14 @@
 #define DY 1
 
 #define GREEN sf::Color::Green
+#define RED sf::Color::Red
+#define BLUE sf::Color::Blue
 
 class Ball {
 public:
     float x, y, radius;
     float dx, dy;
+    int color;
     sf::CircleShape shape{};
 
     Ball(float const &, float const &, float const &);                              // radius x y
