@@ -45,7 +45,6 @@ void Ball::move(sf::RenderWindow &_window) {
 
     this->shape.setOrigin(-this->x, -this->y);
 
-    std::cout << "je suis passe ici" << this->y << std::endl;
     show(_window);
 }
 

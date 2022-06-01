@@ -1,6 +1,6 @@
 # CLion files
 */.idea/
-
+*/.vs/
 # cmake files
 */cmake-build-debug*
 
