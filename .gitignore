@@ -1,6 +1,11 @@
-# CLion files
+# IDE files
 */.idea/
 */.vs/
+
+# SFML files
+*/include
+*/lib
+
 # cmake files
 */cmake-build-debug*
 
